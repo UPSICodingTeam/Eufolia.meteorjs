@@ -1,0 +1,227 @@
+<head>
+  <meta charset="utf-8">
+
+  <title>Eufolia - UPSI's Online Social e-Portfolio</title>
+  <meta name="description" content="Universiti Pendidikan Sultan Idris's first social online e-portfolio, designed to aid the development of future teachers, with an insight into their process and product development.">
+  <meta name="author" content="Dr Hafiz Hanif">
+
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fontawesome CDN
+  =================================================== -->
+  <script src="https://use.fontawesome.com/b7b7688f68.js"></script>
+  <!-- Fontawesome CDN END -->
+
+  <!-- Google Fonts CDN
+  =================================================== -->
+  <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark|Roboto" rel="stylesheet">
+  <!-- Google Fonts CDN END -->
+
+</head>
+
+<body>
+	<section class="hz-menu">
+		<div class="top-bar">
+			<span class="hz-burger" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+				<button class="menu-icon dark" type="button" data-toggle></button>
+			</span>
+		  	<div class="top-bar-title">
+		    	<span class="hz-title"><a href="/home.html"><i class="fa fa-folder-open-o fa-lg" aria-hidden="true"></i> Eufolia</a></span>
+		  	</div>
+		  	<div id="responsive-menu">
+
+		    	<div class="top-bar-right">
+			    	<ul class="show-for-medium menu">
+				    	<li class="button radius small">Create an account</li>
+						<li><a href="#">Login</a></li>
+			    	</ul>
+			    	<ul class="hz-small-menu show-for-small-only menu">
+				    	<li class="button radius small">Create an account</li>
+						<li><a href="#">Login</a></li>
+			    	</ul>
+		    	</div>
+			</div>
+		</div>
+	</section>
+	<section class="hz-body">
+		<div class="row">
+			<div class="medium-3 small-12 columns" data-sticky-container>
+				<div class="hz-left-panel text-center" data-sticky data-anchor="hznewsfeed">
+					<div class="row">
+						<div class="small-12 columns">
+							<img src="/mortarboard.gif">
+							<h5><a href="/profile.html">Dr Hafiz Hanif</a></h5>
+						</div>
+					</div>
+					<hr/>
+					<div class="row">
+						<div class="small-12 columns">
+							<span class="hz-greyfont">Following</span><br/>
+							<span class="success label hz-white"><a href="#">Shalini</a></span>
+							<span class="success label hz-white"><a href="#">Hamzah Fansuri</a></span>
+							<span class="success label hz-white"><a href="#">Raden Masfarto</a></span>
+							<span class="success label hz-white"><a href="#">Nadhirah</a></span>
+							<span class="success label hz-white"><a href="#">Nabeehah</a></span>
+							<span class="success label hz-white"><a href="#">Raja Safinas</a></span>
+							<span class="success label hz-white"><a href="#">TNCPI</a></span>
+						</div>
+					</div>
+					<br/>
+					<span class="hz-greyfont"><a href="people.html">Discover more people on Eufolia</a></span><br/>
+				</div>
+			</div>
+			<div class="medium-6 small-12 columns" id="hznewsfeed">
+				<div class="hz-newsfeed small-12 columns">
+					<div class="row">
+						<ul class="tabs" data-tabs id="status-stories">
+							<li class="tabs-title is-active"><a href="#status"><i class="fa fa-pencil" aria-hidden="true"></i> New Status</a></li>
+							<li class="tabs-title"><a href="#stories"><i class="fa fa-file-text-o" aria-hidden="true"></i> New Stories</a></li>
+							<li class="tabs-title"><a href="#lp"><i class="fa fa-columns" aria-hidden="true"></i> New Lesson Plan</a></li>
+						</ul>
+						<div class="tabs-content" data-tabs-content="status-stories">
+							<div class="tabs-panel is-active" id="status">
+								<div class="hz-greyfont" id="editor_status">
+                  {{> statusPost}}
+								</div>
+							</div>
+							<div class="tabs-panel" id="stories">
+								<div class="hz-greyfont" id="editor_stories">
+                  {{> storiesPost}}
+								</div>
+							</div>
+							<div class="tabs-panel" id="lp">
+								Upload lesson plans here
+                <hr/>
+								<div class="small-12 columns text-right">
+									<a href="#" class="button tiny radius">POST</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr/>
+        {{> statusBox}}
+
+			</div>
+			<div class="medium-3 small-12 columns">
+				<div class="hz-right-panel text-center">
+					<div class="row">
+						<div class="small-12 columns">
+							<h5>Featured Stories</h5>
+						</div>
+					</div>
+          {{> featuredStories}}
+          {{> featuredStories}}
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="hz-footer">
+		<div class="row hz-white">
+			<div class="medium-3 small-12 columns">
+				<img src="/upsi_logo.png">
+			</div>
+			<div class="medium-3 small-12 columns">
+				<h5>&copy; 2017 Eufolia</h5>
+				<ul class="no-bullet">
+					<li>About</li>
+					<li>Blog</li>
+					<li>Sitemap</li>
+				</ul>
+			</div>
+			<div class="medium-3 small-12 columns">
+				<h5>Support</h5>
+				<ul class="no-bullet">
+					<li>Help Centre</li>
+					<li>Community Guidelines</li>
+					<li>Terms of Use</li>
+					<li>Privacy Policy</li>
+				</ul>
+			</div>
+			<div class="medium-3 small-12 columns">
+				<h5>Follow Us</h5>
+				<ul class="no-bullet">
+					<li><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+  	<script>
+	  	$(document).foundation();
+	</script>
+</body>
+
+<!-- TEMPLATES AREA -->
+
+<template name="statusPost">
+  <form id="stathz">
+    <div contenteditable="true" id="eustatus" data-ph="What do you have in mind?"></div>
+    <hr/>
+  	<div class="small-12 columns text-right">
+      <a href="#" class="button tiny radius"><i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i> Upload photos</a>
+  		<button type="submit" class="button tiny radius">POST</button>
+  	</div>
+  </form>
+</template>
+
+<template name="storiesPost">
+  <form action="">
+    <div contenteditable="true" id="eustories" data-ph="Mind sharing your story?"></div>
+    <hr/>
+  	<div class="small-12 columns text-right">
+  		<a href="#" type="submit" class="button tiny radius">POST</a>
+  	</div>
+  </form>
+</template>
+
+<template name="featuredStories">
+  <a href="#">
+		<div class="row hz-small-stories">
+			<div class="small-3 columns">
+				<img src="/hand.gif">
+			</div>
+			<div class="small-9 columns hz-greyfont">
+				<p>lalalallalalal alala alala alala alala alala alala alala kjasdkajh aksjdlasd aslfakslfkhalf aklshflkasfa...</p>
+			</div>
+		</div>
+	</a>
+</template>
+
+<template name="statusBox">
+  {{#each statuses}}
+  <div class="hz-newsfeed small-12 columns">
+    <div class="small-2 columns">
+      <img src="/hand.gif">
+    </div>
+    <div class="hz-newsfeed-name small-10 columns">
+      Hafiz Hanif <span class="hz-greyfont">posted a status</span><br/>
+      <span class="hz-greyfont-smaller"><i class="fa fa-globe" aria-hidden="true"></i> 7 minutes ago</span>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="small-12 columns">
+        <p>{{status}}</p>
+      </div>
+      <div class="small-10 columns hz-greyfont">
+        9 likes
+      </div>
+      <div class="small-2 columns">
+        <div class="small-6 columns">
+          <i class="fa fa-retweet" aria-hidden="true"></i>
+        </div>
+        <div class="small-6 columns">
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+      </div>
+      <hr/>
+    </div>
+  </div>
+  {{/each}}
+</template>
