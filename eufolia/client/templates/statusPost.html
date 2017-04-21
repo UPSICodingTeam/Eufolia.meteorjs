@@ -3,7 +3,8 @@
     <textarea id="eustatus" rows="5" cols="20" placeholder="What do you have in mind?"></textarea>
     <hr/>
   	<div class="small-12 columns text-right">
-      <a href="#" class="button tiny radius"><i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i> Upload photos</a>
+      <input type="file" id="euPhotoUpload" style="visibility: hidden; width: 1px; height: 1px" multiple />
+      <a href="" onclick="document.getElementById('upload').click(); return false" class="button tiny radius"><i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i> Upload photos</a>
   		<button type="submit" class="button tiny radius">POST</button>
   	</div>
   </form>
