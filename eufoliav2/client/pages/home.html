@@ -1,111 +1,194 @@
 <template name="home">
   <section class="hz-menu">
-  		<div class="top-bar">
-  			<span class="hz-burger" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-  				<button class="menu-icon dark" type="button" data-toggle></button>
-  			</span>
-  		  	<div class="top-bar-title">
-  		    	<span class="hz-title"><a href="/home.html"><i class="fa fa-folder-open-o fa-lg" aria-hidden="true"></i> Eufolia</a></span>
-  		  	</div>
-  		  	<div id="responsive-menu">
+		<div class="top-bar">
+			<span class="hz-burger" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+				<button class="menu-icon dark" type="button" data-toggle></button>
+			</span>
+		  	<div class="top-bar-title">
+		    	<span class="hz-title"><a href="/home"><i class="fa fa-folder-open-o fa-lg" aria-hidden="true"></i> Eufolia</a></span>
+		  	</div>
+		  	<div id="responsive-menu">
 
-  		    	<div class="top-bar-right">
-  			    	<ul class="show-for-medium menu">
-  				    	<li class="button radius small">Create an account</li>
-  						<li><a href="#">Login</a></li>
-  			    	</ul>
-  			    	<ul class="hz-small-menu show-for-small-only menu">
-  				    	<li class="button radius small">Create an account</li>
-  						<li><a href="#">Login</a></li>
-  			    	</ul>
-  		    	</div>
-  			</div>
-  		</div>
-  	</section>
-  	<section class="hz-hero-img">
-  		<div class="row text-center">
-  			<div class="hz-main-text small-12 columns">
-  				<h1>Eufolia</h1>
-  				<p>UPSI's First Online Social e-Portfolio Platform</p>
-  			</div>
-  		</div>
-  	</section>
-  	<div class="row text-center hz-section-info">
-  		<div class="small-12 columns">
-  			<div class="medium-4 small-12 columns">
-  				<img src="/hand.gif">
-  				<h5>Empower Learning</h5>
-  				<p>Harness the collective power of social network, through sharing and discussions, to fully develop yourself into a highly polished, versatile teachers. At Eufolia, we promote the culture of sharing and helping each other. </p>
-  			</div>
-  			<div class="medium-4 small-12 columns">
-  				<img src="/screen.gif">
-  				<h5>Personalised Environment</h5>
-  				<p>Users can build their own portfolio of achievements and showcase them to the public through their own profile. With this, users will be able to show potential employers the process and the accumulated experience.</p>
-  			</div>
-  			<div class="medium-4 small-12 columns">
-  				<img src="/mortarboard.gif">
-  				<h5>Product vs. Process</h5>
-  				<p>Eufolia offers insights into both the process and product, of becoming a qualified teacher. These two aspects of teacher development is vital to the understanding of its acculturation and assimilation.</p>
-  			</div>
-  		</div>
-  		<hr/>
-  	</div>
-  	<section class="hz-discover">
-  		<div class="row text-center">
-  			<div class="medium-6 medium-offset-3 small-12 columns">
-  				<h4>Discover what others are doing on Eufolia</h4>
-  				<span class="alert label hz-white"><a href="#">practicum</a></span>
-  				<span class="alert label hz-white"><a href="#">materials online</a></span>
-  				<span class="alert label hz-white"><a href="#">ideas for teaching</a></span>
-  				<span class="alert label hz-white"><a href="#">sample lesson plans</a></span>
-  				<span class="alert label hz-white"><a href="#">food for thoughts</a></span>
-  				<span class="alert label hz-white"><a href="#">introduction</a></span>
-  				<span class="alert label hz-white"><a href="#">help!</a></span>
-  			</div>
-  		</div>
-  	</section>
-  	<hr/>
-  	<section class="hz-optin">
-  		<div class="row text-center">
-  			<div class="small-12 columns">
-  				<h4>Build your social portfolio today!</h4>
-  				<p>Join over <span class="hz-orange">1000</span> registered users with <span class="hz-orange">20,000</span> active stories to read!</p>
-  				<a href="#" class="button radius">Start Your e-Portfolio Today</a>
-  			</div>
-  		</div>
-  	</section>
-  	<section class="hz-footer">
-  		<div class="row hz-white">
-  			<div class="medium-3 small-12 columns">
-  				<img src="/upsi_logo.png">
-  			</div>
-  			<div class="medium-3 small-12 columns">
-  				<h5>&copy; 2017 Eufolia</h5>
-  				<ul class="no-bullet">
-  					<li>About</li>
-  					<li>Blog</li>
-  					<li>Sitemap</li>
-  				</ul>
-  			</div>
-  			<div class="medium-3 small-12 columns">
-  				<h5>Support</h5>
-  				<ul class="no-bullet">
-  					<li>Help Centre</li>
-  					<li>Community Guidelines</li>
-  					<li>Terms of Use</li>
-  					<li>Privacy Policy</li>
-  				</ul>
-  			</div>
-  			<div class="medium-3 small-12 columns">
-  				<h5>Follow Us</h5>
-  				<ul class="no-bullet">
-  					<li><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></li>
-  					<li></li>
-  				</ul>
-  			</div>
-  		</div>
-  	</section>
-    	<script>
-  	  	$(document).foundation();
-  	</script>
+		    	<div class="top-bar-right">
+			    	<ul class="show-for-medium menu">
+				    	<li class="button radius small">Create an account</li>
+						<li><a href="#">Login</a></li>
+			    	</ul>
+			    	<ul class="hz-small-menu show-for-small-only menu">
+				    	<li class="button radius small">Create an account</li>
+						<li><a href="#">Login</a></li>
+			    	</ul>
+		    	</div>
+			</div>
+		</div>
+	</section>
+	<section class="hz-body">
+		<div class="row">
+			<div class="medium-3 small-12 columns" data-sticky-container>
+				<div class="hz-left-panel text-center" data-sticky data-anchor="hznewsfeed">
+					<div class="row">
+						<div class="small-12 columns">
+							<img src="mortarboard.gif">
+							<h5><a href="/profile">Dr Hafiz Hanif</a></h5>
+						</div>
+					</div>
+					<hr/>
+					<div class="row">
+						<div class="small-12 columns">
+							<span class="hz-greyfont">Following</span><br/>
+							<span class="success label hz-white"><a href="#">Shalini</a></span>
+							<span class="success label hz-white"><a href="#">Hamzah Fansuri</a></span>
+							<span class="success label hz-white"><a href="#">Raden Masfarto</a></span>
+							<span class="success label hz-white"><a href="#">Nadhirah</a></span>
+							<span class="success label hz-white"><a href="#">Nabeehah</a></span>
+							<span class="success label hz-white"><a href="#">Raja Safinas</a></span>
+							<span class="success label hz-white"><a href="#">TNCPI</a></span>
+						</div>
+					</div>
+					<br/>
+					<span class="hz-greyfont"><a href="people.html">Discover more people on Eufolia</a></span><br/>
+				</div>
+			</div>
+			<div class="medium-6 small-12 columns" id="hznewsfeed">
+				<div class="hz-newsfeed small-12 columns">
+					<div class="row">
+						<ul class="tabs" data-tabs id="status-stories">
+							<li class="tabs-title is-active"><a href="#status"><i class="fa fa-pencil" aria-hidden="true"></i> New Status</a></li>
+							<li class="tabs-title"><a href="#stories"><i class="fa fa-file-text-o" aria-hidden="true"></i> New Stories</a></li>
+							<li class="tabs-title"><a href="#lp"><i class="fa fa-columns" aria-hidden="true"></i> New Lesson Plan</a></li>
+						</ul>
+						<div class="tabs-content" data-tabs-content="status-stories">
+							<div class="tabs-panel is-active" id="status">
+                {{> StatusEditor}}
+								<hr/>
+								<div class="small-12 columns text-right">
+                  <a href="#" class="button tiny radius"><i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i> Upload photos</a>
+									<a href="#" class="button tiny radius">POST</a>
+								</div>
+							</div>
+							<div class="tabs-panel" id="stories">
+								<div class="hz-greyfont" id="editor_stories">
+								</div>
+								<hr/>
+								<div class="small-12 columns text-right">
+									<a href="#" class="button tiny radius">POST</a>
+								</div>
+							</div>
+							<div class="tabs-panel" id="lp">
+								Upload lesson plans here
+                <hr/>
+								<div class="small-12 columns text-right">
+									<a href="#" class="button tiny radius">POST</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr/>
+				<div class="hz-newsfeed small-12 columns">
+					<div class="small-2 columns">
+						<img src="hand.gif">
+					</div>
+					<div class="hz-newsfeed-name small-10 columns">
+						Hafiz Hanif <span class="hz-greyfont">posted a story</span><br/>
+						<span class="hz-greyfont-smaller"><i class="fa fa-globe" aria-hidden="true"></i> 7 minutes ago</span>
+					</div>
+					<hr/>
+					<div class="row">
+						<div class="small-12 columns">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec laoreet ante. Nulla gravida sem ornare est facilisis accumsan. Nunc mollis posuere magna at consequat. Vestibulum ac justo purus. Morbi luctus tellus felis, at tempor sem maximus a. Nulla at massa rhoncus, semper massa vitae, consequat lectus. Morbi et convallis turpis, quis luctus tortor. Vestibulum posuere tempus turpis, aliquam tempor ipsum porttitor a. Cras euismod ligula non leo laoreet, nec tristique lacus varius. Aenean felis dui, sagittis id tincidunt a, vehicula nec velit. Mauris vel rutrum sem. Quisque tristique tristique odio sit amet sodales. Ut posuere eros mauris, a pellentesque neque dictum quis. Pellentesque mi nulla, maximus vel quam eget, ultrices laoreet justo. Suspendisse erat nulla, ornare at est mattis, luctus aliquam odio. Mauris pharetra mi at ipsum eleifend, gravida blandit nunc facilisis.</p>
+						</div>
+						<div class="small-10 columns hz-greyfont">
+							8 likes
+						</div>
+						<div class="small-2 columns">
+							<div class="small-6 columns">
+								<i class="fa fa-retweet" aria-hidden="true"></i>
+							</div>
+							<div class="small-6 columns">
+								<i class="fa fa-heart-o" aria-hidden="true"></i>
+							</div>
+						</div>
+						<hr/>
+					</div>
+				</div>
+			</div>
+			<div class="medium-3 small-12 columns">
+				<div class="hz-right-panel text-center">
+					<div class="row">
+						<div class="small-12 columns">
+							<h5>Featured Stories</h5>
+						</div>
+					</div>
+
+					<a href="#">
+						<div class="row hz-small-stories">
+							<div class="small-3 columns">
+								<img src="hand.gif">
+							</div>
+							<div class="small-9 columns hz-greyfont">
+								<p>lalalallalalal alala alala alala alala alala alala alala kjasdkajh aksjdlasd aslfakslfkhalf aklshflkasfa...</p>
+							</div>
+						</div>
+					</a>
+					<hr/>
+					<a href="#">
+						<div class="row hz-small-stories">
+							<div class="small-3 columns">
+								<img src="hand.gif">
+							</div>
+							<div class="small-9 columns hz-greyfont">
+								<p>lalalallalalal alala alala alala alala alala alala alala kjasdkajh aksjdlasd aslfakslfkhalf aklshflkasfa...</p>
+							</div>
+						</div>
+					</a>
+					<hr/>
+					<a href="#">
+						<div class="row hz-small-stories">
+							<div class="small-3 columns">
+								<img src="hand.gif">
+							</div>
+							<div class="small-9 columns hz-greyfont">
+								<p>lalalallalalal alala alala alala alala alala alala alala kjasdkajh aksjdlasd aslfakslfkhalf aklshflkasfa...</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="hz-footer">
+		<div class="row hz-white">
+			<div class="medium-3 small-12 columns">
+				<img src="upsi_logo.png">
+			</div>
+			<div class="medium-3 small-12 columns">
+				<h5>&copy; 2017 Eufolia</h5>
+				<ul class="no-bullet">
+					<li>About</li>
+					<li>Blog</li>
+					<li>Sitemap</li>
+				</ul>
+			</div>
+			<div class="medium-3 small-12 columns">
+				<h5>Support</h5>
+				<ul class="no-bullet">
+					<li>Help Centre</li>
+					<li>Community Guidelines</li>
+					<li>Terms of Use</li>
+					<li>Privacy Policy</li>
+				</ul>
+			</div>
+			<div class="medium-3 small-12 columns">
+				<h5>Follow Us</h5>
+				<ul class="no-bullet">
+					<li><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</section>
 </template>

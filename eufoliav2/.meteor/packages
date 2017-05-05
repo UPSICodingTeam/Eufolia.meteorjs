@@ -27,6 +27,8 @@ facebook-config-ui@1.0.0
 momentjs:moment
 zurb:foundation-sites
 
+wvanooijen92:meteorquill
+
 #from LevelUpTuts
 
 kadira:flow-router
