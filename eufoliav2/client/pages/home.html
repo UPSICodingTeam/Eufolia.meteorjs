@@ -1,27 +1,5 @@
 <template name="home">
-  <section class="hz-menu">
-		<div class="top-bar">
-			<span class="hz-burger" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-				<button class="menu-icon dark" type="button" data-toggle></button>
-			</span>
-		  	<div class="top-bar-title">
-		    	<span class="hz-title"><a href="/home"><i class="fa fa-folder-open-o fa-lg" aria-hidden="true"></i> Eufolia</a></span>
-		  	</div>
-		  	<div id="responsive-menu">
-
-		    	<div class="top-bar-right">
-			    	<ul class="show-for-medium menu">
-				    	<li class="button radius small">Create an account</li>
-						<li><a href="#">Login</a></li>
-			    	</ul>
-			    	<ul class="hz-small-menu show-for-small-only menu">
-				    	<li class="button radius small">Create an account</li>
-						<li><a href="#">Login</a></li>
-			    	</ul>
-		    	</div>
-			</div>
-		</div>
-	</section>
+  {{> topbar}}
 	<section class="hz-body">
 		<div class="row">
 			<div class="medium-3 small-12 columns" data-sticky-container>
@@ -60,15 +38,9 @@
 						<div class="tabs-content" data-tabs-content="status-stories">
 							<div class="tabs-panel is-active" id="status">
                 {{> StatusEditor}}
-								<hr/>
-								<div class="small-12 columns text-right">
-                  <a href="#" class="button tiny radius"><i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i> Upload photos</a>
-									<a href="#" class="button tiny radius">POST</a>
-								</div>
 							</div>
 							<div class="tabs-panel" id="stories">
-								<div class="hz-greyfont" id="editor_stories">
-								</div>
+                {{> StoriesEditor}}
 								<hr/>
 								<div class="small-12 columns text-right">
 									<a href="#" class="button tiny radius">POST</a>
@@ -85,33 +57,7 @@
 					</div>
 				</div>
 				<hr/>
-				<div class="hz-newsfeed small-12 columns">
-					<div class="small-2 columns">
-						<img src="hand.gif">
-					</div>
-					<div class="hz-newsfeed-name small-10 columns">
-						Hafiz Hanif <span class="hz-greyfont">posted a story</span><br/>
-						<span class="hz-greyfont-smaller"><i class="fa fa-globe" aria-hidden="true"></i> 7 minutes ago</span>
-					</div>
-					<hr/>
-					<div class="row">
-						<div class="small-12 columns">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec laoreet ante. Nulla gravida sem ornare est facilisis accumsan. Nunc mollis posuere magna at consequat. Vestibulum ac justo purus. Morbi luctus tellus felis, at tempor sem maximus a. Nulla at massa rhoncus, semper massa vitae, consequat lectus. Morbi et convallis turpis, quis luctus tortor. Vestibulum posuere tempus turpis, aliquam tempor ipsum porttitor a. Cras euismod ligula non leo laoreet, nec tristique lacus varius. Aenean felis dui, sagittis id tincidunt a, vehicula nec velit. Mauris vel rutrum sem. Quisque tristique tristique odio sit amet sodales. Ut posuere eros mauris, a pellentesque neque dictum quis. Pellentesque mi nulla, maximus vel quam eget, ultrices laoreet justo. Suspendisse erat nulla, ornare at est mattis, luctus aliquam odio. Mauris pharetra mi at ipsum eleifend, gravida blandit nunc facilisis.</p>
-						</div>
-						<div class="small-10 columns hz-greyfont">
-							8 likes
-						</div>
-						<div class="small-2 columns">
-							<div class="small-6 columns">
-								<i class="fa fa-retweet" aria-hidden="true"></i>
-							</div>
-							<div class="small-6 columns">
-								<i class="fa fa-heart-o" aria-hidden="true"></i>
-							</div>
-						</div>
-						<hr/>
-					</div>
-				</div>
+				{{> statusBox}}
 			</div>
 			<div class="medium-3 small-12 columns">
 				<div class="hz-right-panel text-center">
