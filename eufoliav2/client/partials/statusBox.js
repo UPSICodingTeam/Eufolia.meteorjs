@@ -5,5 +5,9 @@ Template.statusBox.helpers({
   formattedDate: function(){
     var timecreated = this.createdAt;
     return moment(timecreated).fromNow();
+  },
+  author: function(){
+    return Status.author;
   }
+
 });
