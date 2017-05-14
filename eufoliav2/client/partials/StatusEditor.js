@@ -1,3 +1,4 @@
+/*
 Template.StatusEditor.onRendered(function(){
   quill = new Quill('#editor_status', {
     placeholder: "What do you have in mind?"
@@ -19,3 +20,4 @@ Template.StatusEditor.events({
     text[0].innerHTML = '';
   }
 });
+*/

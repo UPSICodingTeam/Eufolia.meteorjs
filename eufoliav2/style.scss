@@ -2,9 +2,6 @@
 @import '{zurb:foundation-sites}/scss/foundation';
 @include foundation-everything;
 /*--- Starts Custom CSS --*/
-[contentEditable=true]:empty:not(:focus):before{
-      content:attr(data-ph)
-  }
 
   #eustatus:focus {
     outline-width: 0;
@@ -251,4 +248,15 @@
 
 .hz-status-content {
   font-size: 0.8em;
+}
+
+div[contenteditable=true]  {
+  outline: none;
+  padding: 10px;
+}
+
+.hz-statuscontent[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey;
+    font-style: italic;
 }
