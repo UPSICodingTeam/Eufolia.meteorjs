@@ -15,7 +15,7 @@ StatusSchema = new SimpleSchema({
     autoform: {
       label: false,
       afFieldInput: {
-        type: "cfs-file",
+        type: "cfs-files",
         collection: "images",
         placeholder: "Click to upload an image, or drop it here",
         class: "hz-imageupload text-center"
