@@ -10,6 +10,18 @@ StatusSchema = new SimpleSchema({
       class:"hz-statuscontent"
     }
   },
+  images: {
+    type: String,
+    autoform: {
+      label: false,
+      afFieldInput: {
+        type: "cfs-file",
+        collection: "images",
+        placeholder: "Click to upload an image, or drop it here",
+        class: "hz-imageupload text-center"
+      }
+    }
+  },
   author: {
     type: String,
     label: "Author",
