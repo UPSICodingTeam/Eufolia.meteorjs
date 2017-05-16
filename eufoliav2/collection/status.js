@@ -1,8 +1,22 @@
-Status = new Meteor.Collection('status');
+Status = new Mongo.Collection('status');
+
+Status.allow({
+  insert: function(userId, doc) {
+    return !!userId;
+  }
+});
+
+Images.allow ({
+  'insert': function(userId, doc){
+    return !!userId;
+  }
+});
+
 
 StatusSchema = new SimpleSchema({
   status: {
     type: String,
+    optional: true,
     autoform: {
       type: 'contenteditable',
       label: false,
@@ -11,7 +25,7 @@ StatusSchema = new SimpleSchema({
     }
   },
   images: {
-    type: String,
+    type: [String],
     autoform: {
       label: false,
       afFieldInput: {

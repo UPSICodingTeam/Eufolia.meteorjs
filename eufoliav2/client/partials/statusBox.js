@@ -7,7 +7,7 @@ Template.statusBox.helpers({
     return moment(timecreated).fromNow();
   },
   author: function(){
-    return '{{the author}}';
+    return this.author;
   }
 
 });
