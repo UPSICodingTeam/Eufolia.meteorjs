@@ -12,6 +12,9 @@
     <div class="row">
       <div class="small-12 columns">
         <p class="hz-status-content">{{{status}}}</p>
+        {{#with FS.GetFile "Images" images}}
+            <img src="{{url}}" class="panel-image-preview" />
+        {{/with}}
       </div>
       <div class="small-10 columns hz-greyfont">
         9 likes

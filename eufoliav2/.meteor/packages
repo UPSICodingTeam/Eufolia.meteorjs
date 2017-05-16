@@ -46,7 +46,8 @@ cfs:standard-packages
 cfs:filesystem
 cfs:autoform
 cfs:ui
-#yogiben:autoform-file
+yogiben:autoform-file
 zimme:active-route
 gwendall:auth-client-callbacks
 meteortoys:allthings
+aldeed:http-fix

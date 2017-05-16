@@ -267,3 +267,23 @@ div[contenteditable=true]  {
   border-width: 2px;
   height: 4rem;
 }
+
+.btn {
+  z-index: 1;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  padding: 0.5em 0.8em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: #1779ba;
+  color: #fefefe;
+
+}

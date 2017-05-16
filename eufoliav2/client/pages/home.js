@@ -3,3 +3,4 @@ Template.home.onRendered(function(){
 });
 
 Meteor.subscribe('status');
+Meteor.subscribe('images');

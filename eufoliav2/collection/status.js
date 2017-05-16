@@ -1,5 +1,13 @@
 Status = new Mongo.Collection('status');
 
+Images = new FS.Collection("images", {
+  stores: [
+    new FS.Store.FileSystem("images", {
+      path:"~/uploads/images"
+    })
+  ]
+});
+
 Status.allow({
   insert: function(userId, doc) {
     return !!userId;
@@ -7,8 +15,14 @@ Status.allow({
 });
 
 Images.allow ({
-  'insert': function(userId, doc){
-    return !!userId;
+  update: function(userId) {
+        return true;
+        },
+  insert: function(userId){
+    return true;
+        },
+  download: function(userId){
+    return true;
   }
 });
 
@@ -25,14 +39,14 @@ StatusSchema = new SimpleSchema({
     }
   },
   images: {
-    type: [String],
+    type: String,
     autoform: {
       label: false,
       afFieldInput: {
-        type: "cfs-files",
+        type: "fileUpload",
         collection: "images",
-        placeholder: "Click to upload an image, or drop it here",
-        class: "hz-imageupload text-center"
+        label: "Choose images from your computer",
+        previewTemplate: 'myFilePreview'
       }
     }
   },
