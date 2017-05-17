@@ -21,3 +21,12 @@ Template.StatusEditor.events({
   }
 });
 */
+var text = document.getElementsByClassName('hz-statuscontent');
+
+AutoForm.hooks({
+  insertStatusForm: {
+    onSuccess: function(){
+       text[0].innerHTML = '';
+    }
+  }
+});

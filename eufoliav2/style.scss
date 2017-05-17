@@ -247,7 +247,7 @@
   }
 
 .hz-status-content {
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 div[contenteditable=true]  {
@@ -272,11 +272,11 @@ div[contenteditable=true]  {
   z-index: 1;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
-  padding: 0.5em 0.8em;
+  padding: 0.3em 0.5em;
   -webkit-appearance: none;
   border: 1px solid transparent;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -286,4 +286,45 @@ div[contenteditable=true]  {
   background-color: #1779ba;
   color: #fefefe;
 
+}
+
+.list-group {
+  list-style-type: none;
+  margin: 0;
+}
+
+.hz-comment {
+  padding:0px;
+}
+
+.comment-content {
+  margin-bottom: 0px;
+}
+
+.comments-box {
+  padding-top: 0px;
+}
+
+.hz-comment-content {
+  padding-left: 10px;
+}
+
+.btnhz-success {
+  background-color: #86d040;
+}
+
+.btnhz-secondary {
+  background-color: #767676;
+}
+
+.btnhz-alert {
+  background-color: #cc4b37;
+}
+
+.boxsizingBorder {
+  width: 100%;
+}
+
+.hz-replywrapper {
+  border-left-style: solid black;
 }

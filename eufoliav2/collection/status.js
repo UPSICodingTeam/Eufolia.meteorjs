@@ -2,8 +2,21 @@ Status = new Mongo.Collection('status');
 
 Images = new FS.Collection("images", {
   stores: [
-    new FS.Store.FileSystem("images", {
-      path:"~/uploads/images"
+    new FS.Store.FileSystem("images"),
+    new FS.Store.FileSystem("thumb", {
+      beforeWrite: function(fileObj) {
+        // We return an object, which will change the
+        // filename extension and type for this store only.
+        return {
+          extension: 'jpeg',
+          type: 'image/jpeg'
+        };
+      },
+      transformWrite : resizeImageStream ({
+        width:562,
+        height:562,
+        quality:50
+      })
     })
   ]
 });
@@ -40,12 +53,13 @@ StatusSchema = new SimpleSchema({
   },
   images: {
     type: String,
+    optional: true,
     autoform: {
       label: false,
       afFieldInput: {
         type: "fileUpload",
         collection: "images",
-        label: "Choose images from your computer",
+        label: "Choose an image from your computer",
         previewTemplate: 'myFilePreview'
       }
     }

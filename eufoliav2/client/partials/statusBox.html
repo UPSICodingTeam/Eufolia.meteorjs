@@ -12,22 +12,17 @@
     <div class="row">
       <div class="small-12 columns">
         <p class="hz-status-content">{{{status}}}</p>
-        {{#with FS.GetFile "Images" images}}
-            <img src="{{url}}" class="panel-image-preview" />
+        {{#with FS.GetFile "images" images}}
+          <div class="row text-center">
+            <a href="{{this.url}}" data-lightbox="newsfeedimages" class="thumbnail">
+              <img src="{{this.url store='thumb'}}" />
+            </a>
+          </div>
         {{/with}}
       </div>
-      <div class="small-10 columns hz-greyfont">
-        9 likes
-      </div>
-      <div class="small-2 columns">
-        <div class="small-6 columns">
-          <i class="fa fa-retweet" aria-hidden="true"></i>
-        </div>
-        <div class="small-6 columns">
-          <i class="fa fa-heart-o" aria-hidden="true"></i>
-        </div>
-      </div>
-      <hr/>
+    </div>
+    <div class="comment-section">
+        {{> commentsBox id=this._id}}
     </div>
   </div>
   {{/each}}

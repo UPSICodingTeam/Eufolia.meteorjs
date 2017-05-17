@@ -29,6 +29,10 @@ zurb:foundation-sites
 
 wvanooijen92:meteorquill
 vazco:universe-html-purifier
+matb33:bootstrap-glyphicons
+xvendo:cfs-image-resize
+czbaker:lightbox2
+#arkham:comments-ui
 
 #from LevelUpTuts
 
@@ -51,3 +55,4 @@ zimme:active-route
 gwendall:auth-client-callbacks
 meteortoys:allthings
 aldeed:http-fix
+apitlekays:comments-ui
