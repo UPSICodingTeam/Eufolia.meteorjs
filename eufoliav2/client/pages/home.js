@@ -3,7 +3,8 @@ Template.home.onRendered(function(){
 });
 
 Comments.ui.config({
-  template: 'foundation'
+  template: 'foundation',
+  defaultAvatar:'https://api.adorable.io/avatars/200'
 });
 
 Comments.config({

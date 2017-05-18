@@ -9,7 +9,7 @@ Images = new FS.Collection("images", {
         // filename extension and type for this store only.
         return {
           extension: 'jpeg',
-          type: 'image/jpeg'
+          type: 'image/*'
         };
       },
       transformWrite : resizeImageStream ({
