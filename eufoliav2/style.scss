@@ -293,8 +293,12 @@ div[contenteditable=true]  {
   margin: 0;
 }
 
-.hz-comment {
-  padding:0px;
+.hz-comments {
+  padding: 0px;
+}
+
+.hz-avatar-name {
+  padding-left: 5px;
 }
 
 .comment-content {
@@ -302,7 +306,8 @@ div[contenteditable=true]  {
 }
 
 .comments-box {
-  padding-top: 0px;
+  margin-top: 5px;
+  background-color: lightgray;
 }
 
 .hz-comment-content {
@@ -327,4 +332,33 @@ div[contenteditable=true]  {
 
 .hz-replywrapper {
   border-left-style: solid black;
+}
+
+hr {
+	margin: 5px auto;
+}
+
+.hz-comment-box textarea {
+  border: none;
+  outline: none;
+	resize: none;
+	font-size: 0.9em;
+	margin-left: 5px;
+	min-width: 100%;
+	width: inherit;
+}
+
+.hz-comments-outer {
+  padding: 0 16px;
+  background-color: e8e8e8;
+  z-index: 1;
+}
+
+.hz-comment-button {
+  margin: 0;
+}
+
+.hz-iframe {
+  width: 100%;
+  min-height: 350px;
 }
