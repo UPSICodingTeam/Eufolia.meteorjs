@@ -16,7 +16,7 @@
   }
 
   body {
-  	background-color: #f7feff;
+  	background-color: #DCDCCC;
   	font-family: 'Roboto', sans-serif;
   }
 
@@ -46,6 +46,7 @@
 
   .hz-title > a {
   	color: white;
+    text-decoration: none;
   }
 
   .hz-burger {
@@ -60,7 +61,7 @@
   }
 
   .top-bar, .top-bar ul{
-  	background-color: #175C86;
+  	background-color: #5FCF80;
 
   }
 
@@ -308,7 +309,7 @@ div[contenteditable=true]  {
 
 .comments-box {
   margin-top: 5px;
-  background-color: lightgray;
+  background-color: #5FCF80;
 }
 
 .hz-comment-content {
@@ -336,6 +337,7 @@ div[contenteditable=true]  {
 }
 
 hr {
+  border-bottom: 1px solid #4faf6b;
 	margin: 5px auto;
 }
 
@@ -362,4 +364,22 @@ hr {
 .hz-iframe {
   width: 100%;
   min-height: 350px;
+}
+
+.tabs-title a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: #3CAAC8 !important;
+}
+
+.btn.btn-default {
+  background-color: #3CAAC8 !important;
+  padding: 10px;
+  cursor:pointer;
+}
+
+.btn.btn-default input {
+  cursor:pointer;
 }

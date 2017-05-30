@@ -7,6 +7,9 @@ Images = new FS.Collection("images", {
       beforeWrite: function(fileObj) {
         // We return an object, which will change the
         // filename extension and type for this store only.
+        if (fileObj.type() == 'application/pdf'){
+          console.log('it\'s a PDF file!');
+        }
         return {
           extension: 'jpeg',
           type: 'image/*'
