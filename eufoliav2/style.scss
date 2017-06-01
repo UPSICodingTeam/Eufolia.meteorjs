@@ -263,6 +263,18 @@ div[contenteditable=true]  {
     font-style: italic;
 }
 
+.hz-storiescontent[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey;
+    font-style: italic;
+}
+
+.hz-storiestitle[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey;
+    font-size: 1.2em;
+}
+
 .hz-imageupload {
   border-style: dashed;
   border-radius: 5px;
@@ -368,6 +380,7 @@ hr {
 
 .tabs-title a {
   text-decoration: none;
+  text-align: center;
 }
 
 .button {
@@ -383,3 +396,16 @@ hr {
 .btn.btn-default input {
   cursor:pointer;
 }
+
+.hz-thumbnail-avatar {
+  border-radius: 3px;
+}
+
+.hz-storytitle {
+  font-size: 1.2em;
+  color: #777;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tabs.three-up dt, .tabs.three-up dd, .tabs.three-up li { width: 33.33%; }

@@ -1,5 +1,11 @@
-Template.StoriesEditor.onRendered(function(){
-  var quill = new Quill('#editor_stories', {
-    placeholder: "Care to share a new story?"
-  });
+var text = document.getElementsByClassName('hz-storiescontent');
+var text1 = document.getElementsByClassName('hz-storiestitle');
+
+AutoForm.hooks({
+  insertStoryForm: {
+    onSuccess: function(){
+      text[0].innerHTML = '';
+      text1[0].innerHTML = '';
+    }
+  }
 });

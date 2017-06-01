@@ -10,6 +10,3 @@ Comments.ui.config({
 Comments.config({
   rating: 'likes-and-dislikes'
 });
-
-Meteor.subscribe('status');
-Meteor.subscribe('images');

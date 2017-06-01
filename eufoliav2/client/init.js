@@ -12,4 +12,10 @@ Meteor.startup(() => {
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })();
+
+  //Settings for Notification system
+  _.extend(Notifications.defaultOptions, {
+        timeout: 5000,
+        animationSpeed: 200
+    });
 });

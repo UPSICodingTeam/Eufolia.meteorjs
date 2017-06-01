@@ -1,31 +1,37 @@
 <template name="statusBox">
-  {{#each statuses}}
-  <div class="hz-newsfeed small-12 columns">
-    <div class="small-2 columns">
-      <img src="/hand.gif">
-    </div>
-    <div class="hz-newsfeed-name small-10 columns">
-      {{author}} <span class="hz-greyfont">posted a status</span><br/>
-      <span class="hz-greyfont-smaller"><i class="fa fa-clock-o" aria-hidden="true"></i> {{formattedDate}}</span>
-    </div>
-    <div class="row">
-      <div class="small-12 columns">
-        <p class="hz-status-content">{{#autolink}}{{{status}}}{{/autolink}}</p>
-        {{#with FS.GetFile "images" images}}
-          <div class="row text-center">
-            <a href="{{this.url}}" data-lightbox="newsfeedimages" class="thumbnail">
-              <img src="{{this.url store='thumb'}}" />
-            </a>
-          </div>
-        {{/with}}
-          <div class="row hz-youtube-container">
-            {{{youtube}}}
-          </div>
+    {{#each newsfeedList}}
+    <div class="hz-newsfeed small-12 columns">
+      <div class="small-2 columns">
+        <img src="/hand.gif">
+      </div>
+      <div class="hz-newsfeed-name small-10 columns">
+        {{author}} <span class="hz-greyfont">posted a {{#if status}} status <i class="fa fa-pencil" aria-hidden="true"></i>{{/if}} {{#if story}} story <i class="fa fa-file-text-o" aria-hidden="true"></i>{{/if}}</span><br/>
+        <span class="hz-greyfont-smaller"><i class="fa fa-clock-o" aria-hidden="true"></i> {{formattedDate}}</span>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          {{#if title }}<p class="hz-storytitle"><i class="fa fa-quote-left" aria-hidden="true"></i> {{title}} <i class="fa fa-quote-right" aria-hidden="true"></i></p> {{/if}}
+          <p class="hz-status-content">{{#autolink}}{{{status}}}{{{story}}}{{/autolink}}</p>
+          {{#with FS.GetFile "images" images}}
+            <div class="row text-center">
+              <a href="{{this.url}}" data-lightbox="{{this.original.name}}" class="thumbnail">
+                <img src="{{this.url store='thumb'}}" />
+              </a>
+            </div>
+          {{/with}}
+            <div class="row hz-youtube-container">
+              {{{youtube}}}
+            </div>
+        </div>
+      </div>
+      <div class="row comment-section">
+          {{> commentsBox id=this._id}}
       </div>
     </div>
-    <div class="row comment-section">
-        {{> commentsBox id=this._id}}
-    </div>
-  </div>
-  {{/each}}
+    {{/each}}
+    {{#if moreResults}}
+        <div id="showMoreResults" style="margin-left: 25px;">
+            <span class="loading text-center"><i class="fa fa-spinner fa-pulse" aria-hidden="true"></i></span>
+        </div>
+    {{/if}}
 </template>

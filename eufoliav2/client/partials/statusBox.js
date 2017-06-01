@@ -1,6 +1,24 @@
+newsfeed_increment = 3;
+Session.setDefault('newsfeedLimit', newsfeed_increment);
+Template.statusBox.onCreated(function(){
+  Deps.autorun(function(){
+    Meteor.subscribe('newsfeed', Session.get('newsfeedLimit'));
+  });
+
+});
+
+
 Template.statusBox.helpers({
-  statuses: function(){
-    return Status.find({}, {sort: {createdAt: -1}});
+  //Merging few collections into one template helper: https://stackoverflow.com/questions/21296712/merging-collections-in-meteor
+  newsfeedList: function(){
+    var statushz = Status.find().fetch();
+    var storyhz = Story.find().fetch();
+    var docs = statushz.concat(storyhz);
+    var sortie = _.sortBy(docs, function(doc){return doc.createdAt;});
+    var ietros = sortie.reverse();
+    var sortieCount = ietros.length;
+
+    return ietros;
   },
   formattedDate: function(){
     var timecreated = this.createdAt;
@@ -10,7 +28,7 @@ Template.statusBox.helpers({
     return this.author;
   },
   youtube: function(){
-    var content = this.status;
+    var content = this.status || this.story;
     //regex to identify Youtube link in status
     const parts = (/(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/([\w\=\-\?]+)/gm).exec(content)
     let mediaContent = ''
@@ -34,5 +52,35 @@ Template.statusBox.helpers({
     } else {
       return hzYoutube;
     }
+  },
+  moreResults: function() {
+    // If, once the subscription is ready, we have less rows than we
+    // asked for, we've got all the rows in the collection.
+    return !(Status.find().count() < Session.get("newsfeedLimit"));
   }
 });
+
+// whenever #showMoreResults becomes visible, retrieve more results
+function showMoreVisible() {
+    var threshold, target = $("#showMoreResults");
+    if (!target.length) return;
+
+    threshold = $(window).scrollTop() + $(window).height() - target.height();
+
+    if (target.offset().top < threshold) {
+        if (!target.data("visible")) {
+            // console.log("target became visible (inside viewable area)");
+            target.data("visible", true);
+            Session.set("newsfeedLimit",
+                Session.get("newsfeedLimit") + newsfeed_increment);
+        }
+    } else {
+        if (target.data("visible")) {
+            // console.log("target became invisible (below viewable arae)");
+            target.data("visible", false);
+        }
+    }
+}
+
+// run the above func every time the user scrolls
+$(window).scroll(showMoreVisible);
