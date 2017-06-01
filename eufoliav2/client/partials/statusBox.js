@@ -1,13 +1,9 @@
 //Reference for infinitescrolling: http://www.meteorpedia.com/read/Infinite_Scrolling
 newsfeed_increment = 3;
 Session.setDefault('newsfeedLimit', newsfeed_increment);
-Template.statusBox.onCreated(function(){
-  Deps.autorun(function(){
-    Meteor.subscribe('newsfeed', Session.get('newsfeedLimit'));
-  });
-
+Deps.autorun(function(){
+  Meteor.subscribe('newsfeed', Session.get('newsfeedLimit'));
 });
-
 
 Template.statusBox.helpers({
   //Merging few collections into one template helper: https://stackoverflow.com/questions/21296712/merging-collections-in-meteor
@@ -17,9 +13,8 @@ Template.statusBox.helpers({
     var docs = statushz.concat(storyhz);
     var sortie = _.sortBy(docs, function(doc){return doc.createdAt;});
     var ietros = sortie.reverse();
-    var sortieCount = ietros.length;
-
-    return ietros;
+    return ietros; // reversed order.
+    //return Status.find();
   },
   formattedDate: function(){
     var timecreated = this.createdAt;

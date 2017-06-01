@@ -1,7 +1,7 @@
 Meteor.startup(() => {
   // code to run on server at startup
   WebFontConfig = {
-    google: { families: [ 'Palanquin Dark', 'Roboto'] }
+    google: { families: [ 'Palanquin Dark', 'Varela Round'] }
   };
   (function() {
     var wf = document.createElement('script');
