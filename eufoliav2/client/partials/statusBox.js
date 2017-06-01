@@ -1,3 +1,4 @@
+//Reference for infinitescrolling: http://www.meteorpedia.com/read/Infinite_Scrolling
 newsfeed_increment = 3;
 Session.setDefault('newsfeedLimit', newsfeed_increment);
 Template.statusBox.onCreated(function(){
@@ -53,6 +54,7 @@ Template.statusBox.helpers({
       return hzYoutube;
     }
   },
+  //Reference for infinitescrolling: http://www.meteorpedia.com/read/Infinite_Scrolling
   moreResults: function() {
     // If, once the subscription is ready, we have less rows than we
     // asked for, we've got all the rows in the collection.
