@@ -365,9 +365,12 @@ hr {
 	width: inherit;
 }
 
+.comments-box hr {
+  border-bottom: 1px solid #4faf95;
+}
+
 .hz-comments-outer {
   padding: 0 16px;
-  background-color: #e8e8e8;
   z-index: 1;
 }
 
