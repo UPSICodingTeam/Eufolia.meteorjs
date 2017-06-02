@@ -1,0 +1,8 @@
+<template name="LpEditor">
+  <div class="hz-greyfont" id="editor_stories">
+
+    <button class="hz-reset float-right"><i class="fa fa-times" aria-hidden="true"></i> Reset</button>
+
+    {{> quickForm collection="Lesson" id="insertLpForm" type="insert" class="new-lp-form" buttonClasses="button small radius hz-postButton float-right" buttonContent="Post" resetOnSuccess="true"}}
+  </div>
+</template>

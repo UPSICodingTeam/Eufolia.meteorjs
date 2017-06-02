@@ -8,17 +8,17 @@
 		    	<span class="hz-title"><a href="/home"><i class="fa fa-folder-open-o fa-lg" aria-hidden="true"></i> Eufolia</a></span>
 		  	</div>
 		  	<div id="responsive-menu">
-
+          {{#if currentUser }}
 		    	<div class="top-bar-right">
-			    	<ul class="show-for-medium menu">
-				    	<li class="button radius small">Create an account</li>
-						<li><a href="#">{{> loginButtons align="right"}}</a></li>
-			    	</ul>
+			    	<div class="show-for-medium menu">
+				    	<button class="button radius small hz-logout-btn">Logout</button>
+			    	</div>
 			    	<ul class="hz-small-menu show-for-small-only menu">
-				    	<li class="button radius small">Create an account</li>
-						<li><a href="#">{{> loginButtons align="right"}}</a></li>
+				    	<li class="button radius small">Logout</li>
+						<li><a href="#"></a></li>
 			    	</ul>
 		    	</div>
+          {{/if}}
 			</div>
 		</div>
 	</section>

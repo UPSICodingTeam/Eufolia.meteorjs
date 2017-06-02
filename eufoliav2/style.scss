@@ -68,7 +68,7 @@
 
   .hz-hero-img {
   	background-image: url(/homepagebgn.gif);
-  	height: 400px;
+  	min-height: 400px;
   	width: 100%;
   }
 
@@ -276,6 +276,27 @@ div[contenteditable=true]  {
     font-size: 1.2em;
 }
 
+.hz-lplevel[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey;
+    font-size: 1.2em;
+}
+
+.hz-lpsubject[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey;
+}
+
+.hz-lptopic[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey;
+}
+
+.hz-lpsubtopic[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey;
+}
+
 .hz-imageupload {
   border-style: dashed;
   border-radius: 5px;
@@ -301,6 +322,22 @@ div[contenteditable=true]  {
   background-color: #1779ba;
   color: #fefefe;
 
+}
+
+.hz-login-register-form {
+  margin-top: 20px;
+}
+
+.hz-logout-btn {
+  margin-right: 10px;
+}
+
+.hz-font-white {
+  color: white;
+}
+
+.hz-font-warning {
+  color: red;
 }
 
 .list-group {
