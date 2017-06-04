@@ -5,11 +5,29 @@
         <img src="/hand.gif">
       </div>
       <div class="hz-newsfeed-name small-10 columns">
-        {{author}} <span class="hz-greyfont">posted a {{#if status}} status <i class="fa fa-pencil" aria-hidden="true"></i>{{/if}} {{#if story}} story <i class="fa fa-file-text-o" aria-hidden="true"></i>{{/if}}</span><br/>
+        {{author}} <span class="hz-greyfont">posted a {{#if status}} status <i class="fa fa-pencil" aria-hidden="true"></i>{{/if}} {{#if story}} story <i class="fa fa-file-text-o" aria-hidden="true"></i>{{/if}} {{#if lpdoc}} lesson <i class="fa fa-columns" aria-hidden="true"></i>{{/if}}</span><br/>
         <span class="hz-greyfont-smaller"><i class="fa fa-clock-o" aria-hidden="true"></i> {{formattedDate}}</span>
       </div>
       <div class="row">
         <div class="small-12 columns">
+          {{#if lpdoc}}
+            <p>Level: {{level}}</p>
+            <p>Subject: {{subject}}</p>
+            <p>Topic: {{topic}}</p>
+            {{#if subtopic}}
+            <p>Subtopic: {{subtopic}}</p>
+            {{/if}}
+            <div class="row">
+              {{#with FS.GetFile "lesson" documents}}
+              <div class="small-2 columns">
+                <a href="{{this.url}}"><i class="fa fa-file-text-o fa-4x" aria-hidden="true"></i></a>
+              </div>
+              <div class="small-10 columns">
+                {{this.name}}
+              </div>
+              {{/with}}
+            </div>
+          {{/if}}
           {{#if title }}<p class="hz-storytitle"><i class="fa fa-quote-left" aria-hidden="true"></i> {{title}} <i class="fa fa-quote-right" aria-hidden="true"></i></p> {{/if}}
           <p class="hz-status-content">{{#autolink}}{{{status}}}{{{story}}}{{/autolink}}</p>
           {{#with FS.GetFile "images" images}}

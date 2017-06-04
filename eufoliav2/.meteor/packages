@@ -23,6 +23,7 @@ shell-server@0.2.3            # Server-side component of the `meteor shell` comm
 accounts-base
 accounts-password
 useraccounts:unstyled
+useraccounts:foundation
 #accounts-ui@1.1.9
 accounts-facebook@1.1.1
 facebook-config-ui@1.0.0

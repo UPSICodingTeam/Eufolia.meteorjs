@@ -45,6 +45,11 @@
   	font-weight: 700;
   }
 
+  .hz-logo {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+
   .hz-title > a {
   	color: white;
     text-decoration: none;
@@ -338,6 +343,10 @@ div[contenteditable=true]  {
 
 .hz-font-warning {
   color: red;
+}
+
+.hz-font-success {
+  color: #00FF00;
 }
 
 .list-group {

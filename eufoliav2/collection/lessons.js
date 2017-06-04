@@ -74,7 +74,7 @@ LessonSchema = new SimpleSchema({
   },
   lpdoc: {
     type: String,
-    optional: true,
+    optional: false,
     autoform: {
       label: false,
       afFieldInput: {
