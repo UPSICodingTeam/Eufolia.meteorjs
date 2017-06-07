@@ -8,12 +8,15 @@ Deps.autorun(function(){
 Template.statusBox.helpers({
   //Merging few collections into one template helper: https://stackoverflow.com/questions/21296712/merging-collections-in-meteor
   newsfeedList: function(){
-    var hza = Status.find().fetch()
-      .concat(Story.find().fetch())
-      .concat(Lesson.find().fetch());
-      var sortie = _.sortBy(hza, function(doc) { return doc.createdAt; });
-      var ietros = sortie.reverse();
-      return ietros; // reversed order.
+    var limit = Session.get('newsfeedLimit');
+    var hzstat = Status.find({}, {limit:limit, sort: {createdAt:-1}}).fetch();
+    var hzsto = Story.find({}, {limit:limit, sort: {createdAt:-1}}).fetch();
+    var hzles = Lesson.find({}, {limit:limit, sort: {createdAt:-1}}).fetch();
+    var oneConcat = hzstat.concat(hzsto);
+    var twoConcat = oneConcat.concat(hzles);
+    var sortie = _.sortBy(twoConcat, function(doc) { return doc.createdAt; });
+    var ietros = sortie.reverse();
+    return ietros; // reversed order.
     /*
     var statushz = Status.find().fetch();
     var storyhz = Story.find().fetch();
