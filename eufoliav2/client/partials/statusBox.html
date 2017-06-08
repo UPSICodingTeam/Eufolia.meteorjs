@@ -11,21 +11,25 @@
       <div class="row">
         <div class="small-12 columns">
           {{#if lpdoc}}
-            <p>Level: {{level}}</p>
-            <p>Subject: {{subject}}</p>
-            <p>Topic: {{topic}}</p>
-            {{#if subtopic}}
-            <p>Subtopic: {{subtopic}}</p>
-            {{/if}}
-            <div class="row">
-              {{#with FS.GetFile "lesson" documents}}
-              <div class="small-2 columns">
-                <a href="{{this.url}}"><i class="fa fa-file-text-o fa-4x" aria-hidden="true"></i></a>
-              </div>
-              <div class="small-10 columns">
-                {{this.name}}
-              </div>
+            <div class="row hz-lp">
+              {{#with FS.GetFile "documents" lpdoc}}
+                <div class="small-2 small-offset-1 hz-lp-icon columns">
+                  <i class="fa fa-file-text-o fa-5x" aria-hidden="true"></i><br/>
+
+                  <a href="{{this.url}}" download><button class="button radius tiny expanded downloaded">Download</button></a>
+                </div>
               {{/with}}
+              <div class="small-6 end hz-lp-content columns">
+                <p>Level: {{this.level}}<br/>
+                Subject: {{subject}}<br/>
+                Topic: {{topic}}<br/>
+                {{#if subtopic}}
+                Subtopic: {{subtopic}}<br/>
+                {{/if}}</p>
+                {{#with FS.GetFile "documents" lpdoc}}
+                <small>File Name: {{this.original.name}}</small>
+                {{/with}}
+              </div>
             </div>
           {{/if}}
           {{#if title }}<p class="hz-storytitle"><i class="fa fa-quote-left" aria-hidden="true"></i> {{title}} <i class="fa fa-quote-right" aria-hidden="true"></i></p> {{/if}}

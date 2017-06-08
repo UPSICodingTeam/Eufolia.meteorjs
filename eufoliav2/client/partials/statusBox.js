@@ -2,35 +2,35 @@
 newsfeed_increment = 3;
 Session.setDefault('newsfeedLimit', newsfeed_increment);
 Deps.autorun(function(){
-  Meteor.subscribe('newsfeed', Session.get('newsfeedLimit'));
+  Meteor.subscribe('newnewsfeed', Session.get('newsfeedLimit'));
 });
 
 Template.statusBox.helpers({
   //Merging few collections into one template helper: https://stackoverflow.com/questions/21296712/merging-collections-in-meteor
   newsfeedList: function(){
     var limit = Session.get('newsfeedLimit');
-    var hzstat = Status.find({}, {limit:limit, sort: {createdAt:-1}}).fetch();
-    var hzsto = Story.find({}, {limit:limit, sort: {createdAt:-1}}).fetch();
-    var hzles = Lesson.find({}, {limit:limit, sort: {createdAt:-1}}).fetch();
+    var hzstat = Status.find({}, {sort: {createdAt:-1}}).fetch();
+    var hzsto = Story.find({}, {sort: {createdAt:-1}}).fetch();
+    var hzles = Lesson.find({}, {sort: {createdAt:-1}}).fetch();
     var oneConcat = hzstat.concat(hzsto);
     var twoConcat = oneConcat.concat(hzles);
-    var sortie = _.sortBy(twoConcat, function(doc) { return doc.createdAt; });
+    var sortie = _.sortBy(twoConcat, function(doc, limit) {
+      return doc.createdAt;
+    });
     var ietros = sortie.reverse();
     return ietros; // reversed order.
-    /*
-    var statushz = Status.find().fetch();
-    var storyhz = Story.find().fetch();
-    var lessonhz = Lesson.find().fetch();
-    var docs = statushz.concat(storyhz);
-    var completedocs = docs.concat(lessonhz);
-    var sortie = _.sortBy(completedocs, function(doc){return doc.createdAt;});
-    var ietros = sortie.reverse();
-    return ietros; // reversed order.
-    //return Status.find(); */
   },
   formattedDate: function(){
     var timecreated = this.createdAt;
     return moment(timecreated).fromNow();
+  },
+  docfile: function(){
+    return Documents.find();
+  },
+  docname: function(){
+    return _.map(Documents.find().fetch(), function(x){
+      return x.name;
+    });
   },
   author: function(){
     return this.author;

@@ -1,3 +1,7 @@
+var hzLogoutFunc = function(){
+  FlowRouter.go('/'); 
+}
+
 AccountsTemplates.configure({
   homeRoutePath: '/home',
   privacyUrl: 'privacy',
@@ -14,7 +18,8 @@ AccountsTemplates.configure({
             //validationErrors: "Validation Errors",
             //verifyEmailFirst: "Please verify your email first. Check the email and follow the link!",
         }
-    }
+    },
+  onLogoutHook : hzLogoutFunc
 });
 
 AccountsTemplates.addFields([

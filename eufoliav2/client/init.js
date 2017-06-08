@@ -19,3 +19,8 @@ Meteor.startup(() => {
         animationSpeed: 200
     });
 });
+
+//console.log helper
+Template.registerHelper("log", function(something) {
+  console.log(something);
+});

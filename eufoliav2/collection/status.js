@@ -58,7 +58,7 @@ Images.allow ({
   insert: function(userId){
     return true;
         },
-  download: function(userId){
+  download: function(){
     return true;
   }
 });
