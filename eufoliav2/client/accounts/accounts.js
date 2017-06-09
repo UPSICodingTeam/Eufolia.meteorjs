@@ -1,11 +1,14 @@
 var hzLogoutFunc = function(){
-  FlowRouter.go('/'); 
+  FlowRouter.go('/');
 }
 
 AccountsTemplates.configure({
   homeRoutePath: '/home',
   privacyUrl: 'privacy',
   termsUrl: 'terms-of-use',
+  sendVerificationEmail: true,
+  enforceEmailVerification: true,
+  showResendVerificationEmailLink: true,
   showForgotPasswordLink: true,
   texts: {
         errors: {

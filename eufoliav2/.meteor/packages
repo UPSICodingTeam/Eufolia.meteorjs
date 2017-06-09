@@ -28,6 +28,7 @@ useraccounts:foundation
 reywood:publish-composite
 momentjs:moment
 zurb:foundation-sites
+alanning:roles
 
 wvanooijen92:meteorquill
 vazco:universe-html-purifier
@@ -62,3 +63,4 @@ apitlekays:comments-ui
 konecty:autolinker
 check
 session
+email

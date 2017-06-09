@@ -30,6 +30,32 @@ FlowRouter.route('/', {
         BlazeLayout.render('home');
       }
     });
+  }
+});
 
+
+FlowRouter.route('/people', {
+  name: 'people',
+  action: function(params){
+    Tracker.autorun(function(){
+      if(!Meteor.userId()){
+        BlazeLayout.render('index');
+      } else {
+        BlazeLayout.render('people');
+      }
+    });
+  }
+});
+
+FlowRouter.route('/profile', {
+  name: 'profile',
+  action: function(params){
+    Tracker.autorun(function(){
+      if(!Meteor.userId()){
+        BlazeLayout.render('index');
+      } else {
+        BlazeLayout.render('profile');
+      }
+    });
   }
 });
