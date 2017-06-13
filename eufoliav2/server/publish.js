@@ -10,6 +10,10 @@ Meteor.publish('newsfeed', function(limit){
   return data;
 });
 */
+// Publishing users to client-side
+Meteor.publish('allUsers', function() {
+  return Meteor.users.find({});
+});
 //Multiple cursors : https://github.com/englue/meteor-publish-composite/issues/36
 Meteor.publishComposite('newnewsfeed', function(limit){
     return [
@@ -37,7 +41,7 @@ Meteor.publishComposite('newnewsfeed', function(limit){
         children: [
           {
               find: function(){
-              return Documents.find({});
+              return Documents.find({}, {limit:limit, sort: {createdAt:-1}});
             }
           }
         ]

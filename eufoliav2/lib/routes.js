@@ -59,3 +59,19 @@ FlowRouter.route('/profile', {
     });
   }
 });
+
+//For email verification tuts: https://themeteorchef.com/tutorials/sign-up-with-email-verification
+FlowRouter.route( '/verify-email/:token', {
+  name: 'verify-email',
+  action( params ) {
+    Accounts.verifyEmail( params.token, ( error ) =>{
+      if ( error ) {
+        FlowRouter.go( '/' );
+        Notifications.warn( error.reason, 'There is something fishy about that. Please email the support team for further assistance. Sorry for any inconvenience caused.' );
+      } else {
+        FlowRouter.go( '/home' );
+        Notifications.success( 'Email verified!', 'You have successfully verified your email address! Please enjoy your stay at Eupholia@UPSI!' );
+      }
+    });
+  }
+});

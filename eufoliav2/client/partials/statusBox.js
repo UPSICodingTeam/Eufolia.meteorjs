@@ -6,6 +6,7 @@ Deps.autorun(function(){
 
   } else {
     Meteor.subscribe('newnewsfeed', Session.get('newsfeedLimit'));
+    Meteor.subscribe('allUsers');
   }
 });
 
@@ -16,8 +17,10 @@ Template.statusBox.helpers({
     var hzstat = Status.find({}, {sort: {createdAt:-1}}).fetch();
     var hzsto = Story.find({}, {sort: {createdAt:-1}}).fetch();
     var hzles = Lesson.find({}, {sort: {createdAt:-1}}).fetch();
+    //var hzdoc = Documents.find({}, {sort: {createdAt:-1}}).fetch();
     var oneConcat = hzstat.concat(hzsto);
     var twoConcat = oneConcat.concat(hzles);
+    //var threeConcat = twoConcat.concat(hzdoc);
     var sortie = _.sortBy(twoConcat, function(doc, limit) {
       return doc.createdAt;
     });
@@ -37,7 +40,7 @@ Template.statusBox.helpers({
     });
   },
   author: function(){
-    return this.author;
+    return Meteor.users.findOne({_id: this.author});
   },
   youtube: function(){
     var content = this.status || this.story;

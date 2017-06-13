@@ -10,3 +10,9 @@ Comments.ui.config({
 Comments.config({
   rating: 'likes-and-dislikes'
 });
+
+Template.home.helpers({
+  author: function(){
+    return Meteor.user();
+  }
+});

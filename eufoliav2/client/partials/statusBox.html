@@ -5,7 +5,7 @@
         <img src="/hand.gif">
       </div>
       <div class="hz-newsfeed-name small-10 columns">
-        {{author}} <span class="hz-greyfont">posted a {{#if status}} status <i class="fa fa-pencil" aria-hidden="true"></i>{{/if}} {{#if story}} story <i class="fa fa-file-text-o" aria-hidden="true"></i>{{/if}} {{#if lpdoc}} lesson <i class="fa fa-columns" aria-hidden="true"></i>{{/if}}</span><br/>
+        {{author.profile.firstName}} <span class="hz-greyfont">posted a {{#if status}} status <i class="fa fa-pencil" aria-hidden="true"></i>{{/if}} {{#if story}} story <i class="fa fa-file-text-o" aria-hidden="true"></i>{{/if}} {{#if lpdoc}} lesson <i class="fa fa-columns" aria-hidden="true"></i>{{/if}}</span><br/>
         <span class="hz-greyfont-smaller"><i class="fa fa-clock-o" aria-hidden="true"></i> {{formattedDate}}</span>
       </div>
       <div class="row">

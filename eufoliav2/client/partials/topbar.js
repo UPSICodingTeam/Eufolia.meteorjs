@@ -3,3 +3,9 @@ Template.topbar.events({
     AccountsTemplates.logout();
   }
 });
+
+Template.topbar.helpers({
+  author: function(){
+    return Meteor.user();
+  }
+});
