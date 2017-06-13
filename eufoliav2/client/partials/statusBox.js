@@ -2,11 +2,12 @@
 newsfeed_increment = 3;
 Session.setDefault('newsfeedLimit', newsfeed_increment);
 Deps.autorun(function(){
-  if(!Meteor.user()){
-
-  } else {
+  if(Meteor.user() && Meteor.user().emails[0].verified){
     Meteor.subscribe('newnewsfeed', Session.get('newsfeedLimit'));
     Meteor.subscribe('allUsers');
+  } else {
+
+
   }
 });
 
