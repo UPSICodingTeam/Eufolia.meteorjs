@@ -30,3 +30,7 @@ AutoForm.hooks({
     }
   }
 });
+
+Template.StatusEditor.onRendered(function(){
+  $(document).foundation();
+});

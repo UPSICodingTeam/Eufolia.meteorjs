@@ -471,9 +471,16 @@ hr {
 
 .hz-lp-icon button {
   margin-top: 5px;
-  padding: 5px; 
+  padding: 5px;
 }
 
 .hz-lp-content {
   padding: 5px 0px 0px 20px;
+}
+
+.hz-verification {
+  padding: 20px;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
 }

@@ -1,5 +1,13 @@
 <template name="home">
   {{> topbar}}
+  {{#unless currentUser.emails.[0].verified}}
+  <div class="row">
+    <div class="medium-6 medium-offset-3 end columns">
+      <p class="hz-verification alert alert-warning text-center">You need to verify your email address before using Eupholia@UPSI. <a href="#" class="resend-verification-link button radius">Resend verification link</a></p>
+    </div>
+  </div>
+  {{else}}
+
 	<section class="hz-body">
 		<div class="row">
 			<div class="medium-3 small-12 columns" data-sticky-container>
@@ -130,4 +138,5 @@
 			</div>
 		</div>
 	</section>
+{{/unless}}
 </template>
